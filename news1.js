@@ -3,7 +3,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 var i;
-fetch("https://api.coronatracker.com/news/trending?limit=10&offset&country=Spain&countryCode", requestOptions)
+fetch("https://api.coronatracker.com/news/trending?limit=10&offset&country=India&countryCode", requestOptions)
   .then(response => response.text())
   .then(result => {
         document.getElementById("news").innerHTML = "";
