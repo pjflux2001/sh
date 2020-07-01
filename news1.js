@@ -8,8 +8,7 @@ fetch("https://api.coronatracker.com/news/trending?limit=10&offset&country=Spain
   .then(result => {
         document.getElementById("news").innerHTML = "";
         for(i = 0; i < 10 ; i++){
-                  document.getElementById("news").innerHTML += result.items[i].title;
-                  document.getElementById("news").innerHTML += "<hr>";
+                  document.getElementById("news").innerHTML += "<hr>" + "<b>" + result.items[i].title + "</b>" + "<hr>";
                   if(result.items[i].author.length==0)
                     document.getElementById("news").innerHTML += "Author : Anonymous";
                   else
