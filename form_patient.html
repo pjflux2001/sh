@@ -12,7 +12,7 @@
 
     <form>
       <div>
-      <div class="form-row">
+      <!--<div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="v1">Date</label>
           <input id="v1" type="date" class="form-control" value ="2020-01-01" min="2020-01-01" max="2020-12-30" required>
@@ -55,18 +55,97 @@
           <label for="validationDefault03">Comments</label>
           <input id="v6" type="text" class="form-control" style="size: auto;">
         </div>
-            </div>
+      </div>-->
+
+      <!--patient name-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v7">Patient Name</label>
+          <input id="v7" type="text" class="form-control" style="size: auto;">
+        </div>
+      </div>
+      <!--patient mobile number-->
+      <!--mobile number pattern not configured-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v8">Mobile Number</label>
+          <input id="v8" type="tel" class="form-control" pattern="" style="size: auto;"> 
+        </div>
+      </div>
+      <!--patient email-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v9">Email</label>
+          <input id="v9" type="email" class="form-control" style="size: auto;"> 
+        </div>
+      </div>
+      <!--patient age-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v10">Age</label>
+          <input id="v10" type="number" class="form-control" style="size: auto;"> 
+        </div>
+      </div>
+      <!--patient gender-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v11">Gender</label>
+          <select id="v11" required>
+            <option selected>--select--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+      </div>
+      <!--hospital name-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v14">Hospital Name</label>
+          <input id="v14" type="text" class="form-control" style="size: auto;"> 
+        </div>
+      </div>
+      <!--patient city-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v12">City</label>
+          <input id="v12" type="text" class="form-control" style="size: auto;"> 
+        </div>
+      </div>
+      <!--patient country-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v13">Country</label>
+          <input id="v13" type="text" class="form-control" style="size: auto;"> 
+        </div>
+      </div>
+      <!--patient blood group-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="v15">Blood Group</label>
+          <select id="v15" required>
+            <option selected>--select--</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </div>
+      </div>
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
           <label class="form-check-label" for="invalidCheck2">
-            Agree to terms and conditions
+            I agree to terms & conditions
           </label>
         </div>
       </div>
-      <button id="add_patient" class="btn btn-primary" type="button" >Create</button>
-      <br>
       <button onClick="window.location.href=window.location.href; alert('Form reset!');" class="btn btn-warning" type="button">Reset</button>
+      <button id="add_patient" class="btn btn-primary" type="button" >Create</button>
     </div>
     </form>
   </div>
