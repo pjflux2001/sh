@@ -39,6 +39,6 @@
     });
   
     $(document).on("click", ".delete-donor", function(){
-      var cabID = $(this).attr('id');
-      firebase.database().ref("donor/" + cabID).remove();
+      var donorID = $(this).attr('id');
+      firebase.database().ref("donor/" + donorID).remove();
     });
