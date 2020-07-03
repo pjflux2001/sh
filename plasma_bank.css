@@ -17,6 +17,7 @@
 #parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:white; font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
 #parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
 #parallax-world-of-ugg p {font-family:'Source Sans Pro', sans-serif; font-weight:500; font-size:25px; line-height:30px;}
+#parallax-world-of-ugg ol {font-family:'Source Sans Pro', sans-serif; font-weight:500; font-size:25px; line-height:30px;}
 .first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
 
 .sc {color: #3b8595;}
