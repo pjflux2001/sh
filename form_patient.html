@@ -61,7 +61,7 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v7">Patient Name</label>
-          <input id="v7" type="text" class="form-control" style="size: auto;">
+          <input id="v7" type="text" class="form-control" style="size: auto;" required>
         </div>
       </div>
       <!--patient mobile number-->
@@ -116,7 +116,7 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v13">Country</label>
-          <input id="v13" type="text" class="form-control" style="size: auto;"> 
+          <input id="v13" type="text" class="form-control" style="size: auto;">
         </div>
       </div>
       <!--patient blood group-->
@@ -136,6 +136,16 @@
           </select>
         </div>
       </div>
+      
+      <link rel="stylesheet" href="build/css/countrySelect.css">
+      <input type="text" id="country">
+ 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="build/js/countrySelect.min.js"></script>
+      <script>
+        $("#country").countrySelect();
+      </script> 
+      
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
