@@ -3,8 +3,8 @@
   function addDonor(h){
     firebase.database().ref('donor/' + h.id).set(h);
   }
-  
-  $(add_donor).click(function(){
+
+  $(add_donor).click(function(e){
     var donor = {
       //id: $("#v1").val() + Date.now(),
       id: Date.now(),
@@ -30,8 +30,22 @@
       bloodPressure: $("#v19").val(),
       recoveryDate: $("#v20").val()
     };
-  addDonor(donor);
-  alert("Created!");
+    //Umang check this out
+    e.preventDefault();
+        var empty = false;
+        jQuery('input:text').each(function(){
+            if(jQuery(this).val()==''){
+                alert('error');
+                empty = false;
+            } else empty = true;
+        });
+        if(empty){
+          addDonor(donor);
+          alert("Created!");
+        }else
+            alert('your error message');
+  
+ 
     });
   
 
