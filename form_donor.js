@@ -30,22 +30,24 @@
       bloodPressure: $("#v19").val(),
       recoveryDate: $("#v20").val()
     };
-    //Umang check this out
-    e.preventDefault();
-        var empty = false;
-        jQuery('input:text').each(function(){
-            if(jQuery(this).val()==''){
-                alert('error');
+
+        var empty = true;
+  
+        $("input,select").filter('[required]').each(function(){
+            if(jQuery(this).val() == ""){
                 empty = false;
-            } else empty = true;
+                return false;
+              }
         });
+
         if(empty){
           addDonor(donor);
           alert("Created!");
-        }else
-            alert('your error message');
-  
- 
+        }
+        else{
+            alert('Invalid Field');
+        }
+    
     });
   
 
@@ -61,7 +63,7 @@
           //patientHTMLitem += "<li> Time : <span>"+ item.time + "</span></li>"
           donorHTMLitem += "<li><b> Date : </b><span>"+ item.date + "</span></li>"
           //patientHTMLitem += "<li> Contact : <span>"+ item.contact + "</span></li>"
-          donorHTMLitem += "<li><b> Patient Name : </b><span>"+ item.patientName + "</span></li>"
+          donorHTMLitem += "<li><b> Patient Name : </b><span>"+ item.donorName + "</span></li>"
           donorHTMLitem += "<li><b> Mobile Number : </b><span>"+ item.mobileNumber + "</span></li>"
           donorHTMLitem += "<li><b> Email : </b><span>"+ item.emailAddress + "</span></li>"
           donorHTMLitem += "<li><b> Age : </b><span>"+ item.age + "</span></li>"
