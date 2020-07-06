@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>
         Hack
     </title>
@@ -8,9 +9,9 @@
 
 <!--patient form-->
 <body>
-  <div id="donor_form" style="margin: auto; width: 50%; border: 2px dotted black; padding: 25px;">
-
-    <form>
+  <div id="donor_form">
+    <div class="container w-75 border p-5 mb-5">
+    <form class="was-validated">
       <div>
       <!--<div class="form-row">
         <div class="col-md-4 mb-3">
@@ -61,7 +62,8 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v7">Patient Name</label>
-          <input id="v7" type="text" class="form-control" style="size: auto;" required>
+          <input id="v7" type="text" class="form-control col-sm-8" style="size: auto;" required>
+          <div class="invalid-feedback">Please provide a valid name.</div>
         </div>
       </div>
       <!--patient mobile number-->
@@ -69,21 +71,24 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v8">Mobile Number</label>
-          <input id="v8" type="tel" class="form-control" pattern="" style="size: auto;"> 
+          <input id="v8" type="number" class="form-control col-sm-8" pattern="[0-9]{6,12}" style="size: auto;" required>
+          <div class="invalid-feedback">Please provide a valid mobile number.</div> 
         </div>
       </div>
       <!--patient email-->
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v9">Email</label>
-          <input id="v9" type="email" class="form-control" style="size: auto;"> 
+          <input id="v9" type="email" class="form-control col-sm-8" style="size: auto;" pattern="[a-z0-9]+([-+._][a-z0-9]+){0,2}@.*?(\.(a(?:[cdefgilmnoqrstuwxz]|ero|(?:rp|si)a)|b(?:[abdefghijmnorstvwyz]iz)|c(?:[acdfghiklmnoruvxyz]|at|o(?:m|op))|d[ejkmoz]|e(?:[ceghrstu]|du)|f[ijkmor]|g(?:[abdefghilmnpqrstuwy]|ov)|h[kmnrtu]|i(?:[delmnoqrst]|n(?:fo|t))|j(?:[emop]|obs)|k[eghimnprwyz]|l[abcikrstuvy]|m(?:[acdeghklmnopqrstuvwxyz]|il|obi|useum)|n(?:[acefgilopruz]|ame|et)|o(?:m|rg)|p(?:[aefghklmnrstwy]|ro)|qa|r[eosuw]|s[abcdeghijklmnortuvyz]|t(?:[cdfghjklmnoprtvwz]|(?:rav)?el)|u[agkmsyz]|v[aceginu]|w[fs]|y[etu]|z[amw])\b){1,2}" required> 
+          <div class="invalid-feedback">Please provide a valid email.</div>
         </div>
       </div>
       <!--patient age-->
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v10">Age</label>
-          <input id="v10" type="number" class="form-control" style="size: auto;"> 
+          <input id="v10" type="number" min="0" max="110" class="form-control col-sm-8" style="size: auto;" required> 
+          <div class="invalid-feedback">Please provide a valid age.</div>
         </div>
       </div>
       <!--patient gender-->
@@ -91,7 +96,7 @@
         <div class="col-md-6 mb-3">
           <label for="v11">Gender</label>
           <select id="v11" required>
-            <option selected>--select--</option>
+            <option selected value="">--select--</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="others">Others</option>
@@ -102,21 +107,24 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v14">Hospital Name</label>
-          <input id="v14" type="text" class="form-control" style="size: auto;"> 
+          <input id="v14" type="text" class="form-control col-sm-8" style="size: auto;" required> 
+          <div class="invalid-feedback">Please provide a valid hospital name.</div>
         </div>
       </div>
       <!--patient city-->
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v12">City</label>
-          <input id="v12" type="text" class="form-control" style="size: auto;"> 
+          <input id="v12" type="text" class="form-control col-sm-8" style="size: auto;" required> 
+          <div class="invalid-feedback">Please provide a valid city.</div>
         </div>
       </div>
       <!--patient country-->
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v13">Country</label>
-          <input id="v13" type="text" class="form-control" style="size: auto;">
+          <input id="v13" type="text" class="form-control col-sm-8" style="size: auto;" required>
+          <div class="invalid-feedback">Please provide a valid country.</div>
         </div>
       </div>
       <!--patient blood group-->
@@ -144,12 +152,14 @@
           </label>
         </div>
       </div>
+      <div class="form-group pt-3">
       <button onClick="window.location.href=window.location.href; alert('Form reset!');" class="btn btn-warning" type="button">Reset</button>
       <button id="add_patient" class="btn btn-primary" type="button" >Create</button>
+      </div>
     </div>
     </form>
+    </div>
   </div>
-
 
 
   <!--show patient-->
@@ -186,9 +196,9 @@
     </script>
 
      <!--js file-->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <script src="form_patient.js"></script>
 </body>
 </html>

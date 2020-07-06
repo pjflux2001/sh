@@ -24,9 +24,24 @@
       hospitalName: $("#v14").val(),
       bloodGroup: $("#v15").val()
     };
-  addpatient(patient);
-  alert("Created!");
+    var empty = true;
+  
+    $("input,select").filter('[required]').each(function(){
+        if(jQuery(this).val() == ""){
+            empty = false;
+            return false;
+          }
     });
+
+    if(empty){
+      addpatient(patient);
+      alert("Created!");
+    }
+    else{
+        alert('Invalid Field');
+    }
+ 
+  });
   
   var addpatientref = firebase.database().ref().child("patient");
     addpatientref.on("value", function(snapshot) {
