@@ -23,16 +23,22 @@ app.get("/",function(req,res){
 
 // using Twilio SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
+app.post("/email",function(req,res){
+	var email =  req.body.email;
+	console.log(email);
+	sgMail.setApiKey("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");
+	const msg = {
+	to: email,
+	from: 'pj.flux2001@gmail.com',
+	subject: 'SMK Sending with Twilio SendGrid is Fun',
+	text: 'and easy to do anywhere, even with Node.js',
+	html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+	};
+	sgMail.send(msg);
+	res.render("index");
+})
 
-sgMail.setApiKey("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");
-const msg = {
-  to: 'f20180332@goa.bits-pilani.ac.in',
-  from: 'pj.flux2001@gmail.com',
-  subject: 'Sending with Twilio SendGrid is Fun',
-  text: 'and easy to do anywhere, even with Node.js',
-  html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-};
-sgMail.send(msg);
+
 
  
 
