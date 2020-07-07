@@ -4,7 +4,65 @@
     firebase.database().ref('donor/' + h.id).set(h);
   }
 
-  $(add_donor).click(function(e){
+  $(function(){
+
+    var check = true;
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+          check =false;
+          //alert("event js listener activated");
+        }
+        else{check=true;}
+        form.classList.add('was-validated');
+      },false);
+    });
+
+   $("form").submit(function(){
+    if(check)
+    {
+      var donor = {
+        //id: $("#v1").val() + Date.now(),
+        id: Date.now(),
+        date: Date(Date.now()),
+        //date: $("#v1").val(),
+        //time: $("#v2").val(),
+        
+        //contact: $("#v5").val(),
+        //comments: $("#v6").val(),
+  
+        donorName: $("#v7").val(),
+        mobileNumber: $("#v8").val(),
+        emailAddress: $("#v9").val(),
+        age: $("#v10").val(),
+        gender: $("#v11").val(),
+        city: $("#v12").val(),
+        country: $("#v13").val(),
+        bloodGroup: $("#v14").val(),
+        diabetes: $("#v15").val(),
+        liver: $("#v16").val(),
+        kidney: $("#v17").val(),
+        lung: $("#v18").val(),
+        bloodPressure: $("#v19").val(),
+        recoveryDate: $("#v20").val()
+      };
+      addDonor(donor);
+      alert("Form Submitted Successfully !");
+    }
+    else
+    {
+      alert("Please Try Again");
+    }
+  });
+});
+
+
+  /*$(add_donor).click(function(e){
     var donor = {
       //id: $("#v1").val() + Date.now(),
       id: Date.now(),
@@ -48,7 +106,7 @@
             alert('Invalid Field');
         }
     
-    });
+    });*/
   
 
     // 
