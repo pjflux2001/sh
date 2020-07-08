@@ -1,3 +1,4 @@
+document.getElementById("patient_").classList.add("active")
   
   function addpatient(h){
     firebase.database().ref('patient/' + h.id).set(h);

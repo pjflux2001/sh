@@ -1,3 +1,5 @@
+document.getElementById("news_").classList.add("active")
+
 var requestOptions = {
   method: 'GET',
   redirect: 'follow'
