@@ -20,6 +20,21 @@ app.use(bodyParser.json());
 app.get("/",function(req,res){
 	res.render("index");
 });
+app.get("/news",function(req,res){
+	res.render("news1");
+});
+app.get("/form_donor",function(req,res){
+	res.render("form_donor");
+});
+app.get("/form_patient",function(req,res){
+	res.render("form_patient");
+});
+app.get("/common_pool",function(req,res){
+	res.render("common_pool");
+});
+app.get("/plasma_bank",function(req,res){
+	res.render("plasma_bank");
+});
 
 // using Twilio SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
