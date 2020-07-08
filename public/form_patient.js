@@ -158,7 +158,7 @@
           patientHTMLitem +=  "</div>"
           patientHTMLitem += "</div>"
 
-          patientHTMLitem +=    "<button type='button' class='btn btn-outline-danger delete-donor btn-sm mx-2' id="+item.id+">Delete Donor</button>";
+          patientHTMLitem +=    "<button type='button' class='btn btn-outline-danger delete-patient btn-sm mx-2' id="+item.id+">Delete Patient</button>";
           patientHTMLitem +=    '<footer class="blockquote-footer text-center text-muted p-2">'
           patientHTMLitem +=      "<small>Created On: "+ item.date + "</small>";
           patientHTMLitem +=    '</footer>'
