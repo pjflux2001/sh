@@ -123,7 +123,7 @@
           //patientHTMLitem += "<li> Time : <span>"+ item.time + "</span></li>"
           //patientHTMLitem += "<li><b> Date : </b><span>"+ item.date + "</span></li>"
           //patientHTMLitem += "<li> Contact : <span>"+ item.contact + "</span></li>"
-          patientHTMLitem += '<div class="col-6 col-sm-6 p-5">'
+          patientHTMLitem += '<div class="col-12 col-sm-6 p-5">'
           patientHTMLitem += '<div class="card bg-light mb-3 border-dark" style="max-width: auto;">';//1
           patientHTMLitem += '<div class="card-header text-center bg-dark">'
           patientHTMLitem += '  <ul class="nav nav-tabs card-header-tabs">'

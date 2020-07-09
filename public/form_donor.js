@@ -127,7 +127,7 @@
           //patientHTMLitem += "<li> Contact : <span>"+ item.contact + "</span></li>"
           //donorHTMLitem += '<div class="container">';
           //donorHTMLitem += '<div class="row">';
-          donorHTMLitem += '<div class="col-6 col-sm-6 p-5">'
+          donorHTMLitem += '<div class="col-12 col-sm-6 p-5">'
           donorHTMLitem += '<div class="card bg-light mb-3 border-dark" style="max-width: auto;">';//1
           donorHTMLitem += '<div class="card-header text-center bg-dark">'
           donorHTMLitem += '  <ul class="nav nav-tabs card-header-tabs">'
