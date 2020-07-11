@@ -37,16 +37,16 @@ function geocodeAndSearch(){
       for(let i =0 ; i <result.items.length;i++){
         decky.innerHTML += '<div class="card">'+
          '<div class="card-body text-center">'+
-          '<h3 class="card-title">'+result.items[i].title+'</h3>'+
+          '<h3 class="card-title">'+result.items[i].title+'</h3><hr>'+
            '<p class="card-text"><h5>'+result.items[i].distance/1000+' Kms</h5>'+result.items[i].address.label+'</p>'+
           '</div>' +
           '<div class="card-footer text-center">'+
-            '<small class="text-muted"><a target="_blank" href="'+ 'https://www.google.com/maps/@'+ result.items[i].position.lat+','+result.items[i].position.lng+',21z' +'"><i class="fa fa-map-o fa-2x" aria-hidden="true"></i></a>'+'</small>'+
+            '<small><a target="_blank" href="'+ 'https://www.google.com/maps/@'+ result.items[i].position.lat+','+result.items[i].position.lng+',21z' +'"><i class="fa fa-map-o fa-2x" aria-hidden="true" style="padding-left: inherit;"></i></a></small>'+'<a target="_blank" href="'+'https://www.google.com/search?q='+result.items[i].title.replace(" ","+")+'"<i class="fa fa-google fa-2x" aria-hidden="true" ></i>'+'</a>'
           '</div>'+
       '  </div>'
       
       }
-      document.getElementById("result_a").innerHTML = "&ensp;"+result.items.length + " " + query +"(s) found in " + rad + " meters ( " + rad/1000 + " kilometers ) around you";        
+      document.getElementById("result_a").innerHTML = "&ensp;"+result.items.length + " " + query +"(s) found in " + rad/1000 + " kilometers around you";        
       //info bubble
                
   }
