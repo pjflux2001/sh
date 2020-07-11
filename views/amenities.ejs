@@ -1,0 +1,47 @@
+<%- include("./partials/header") %>
+
+    <form action="./amenities" method="GET">
+        &ensp;
+        <label for="service">Service :</label>
+        <input type="text" id="service" name="service" value="" placeholder="Service you looking for">
+        &ensp;
+        <label for="radius">Search Radius :</label>
+              
+        <input type="button" value="-" onClick="subtract_one()"> 0
+        <input type="range" id="radius" min="0" max="100000" step="1" name="radius" value="50000" onchange="show_value(this.value); show_value1(this.value)" placeholder="Search radius you looking in">
+        <input type="button" value="+" onClick="add_one()"> 100000
+        <span id="slider_value" style="color:red;font-weight:bold;"></span>
+        <label>meter(s) = </label>
+        <span id="slider_value1" style="color:red;font-weight:bold;"></span>
+        <label>kilometers(s)</label>
+        &ensp;
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <script>
+        show_value(document.getElementById("radius").value);
+        show_value1(document.getElementById("radius").value);
+            function show_value(x)
+            {
+            document.getElementById("slider_value").innerHTML=x;
+            }
+            function show_value1(x)
+            {
+            document.getElementById("slider_value1").innerHTML=x/1000;
+            }
+            function add_one()
+            {
+            document.getElementById("radius").value=parseInt(document.getElementById("radius").value)+1000;
+            show_value(document.getElementById("radius").value);
+            show_value1(document.getElementById("radius").value);
+            }
+            function subtract_one()
+            {
+            document.getElementById("radius").value=parseInt(document.getElementById("radius").value)-1000;
+            show_value(document.getElementById("radius").value);
+            show_value1(document.getElementById("radius").value);
+            }
+    </script>
+
+<%- include("./partials/footer") %>
