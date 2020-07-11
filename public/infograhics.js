@@ -14,9 +14,39 @@ var settings = {
 
 $.ajax(settings).done(function (response) {
 
-	for(i=1; i<35; i++){
-	document.getElementById("val").innerHTML += "<p>"+ response.value[i].thumbnailUrl + "</p>"
+	for(i=0; i<35; i++){
+	document.getElementById("slideshow").innerHTML += '<img id="myImg'+i+'"src="'+response.value[i].thumbnailUrl+'"alt="insert text here" />'
 	//document.getElementById("val").innerHTML += "<div class='carousel-item active'>" + "<img src=\""+ response.value[0].thumbnailUrl +"\" class='d-block w-100 h-100'</img>" + "</div>" + "<div class='carousel-item'>" + "<img src=\""+ response.value[i].thumbnailUrl +"\" class='d-block w-100 h-100'</img>" + "</div>";
 	}
 	console.log(response);
 });
+
+(function(){
+
+	var slideshow = document.getElementById('slideshow'),
+		imgs = slideshow.getElementsByTagName('img'),
+		count = 0,
+		timer,
+		previous;
+  
+	function next(){
+	  previous = count > 0 ? count - 1 : 0;
+	  imgs[ previous ].className = imgs[ previous ].className.replace(/\bis\-active\b/i, '' );
+	  
+	  if( count < imgs.length ){
+		imgs[ count ].className += 'is-active';
+		count++;
+	  }  
+	  else{
+		count = 0;
+		next();
+	  }
+	}
+  
+	next();
+  
+	timer = setInterval(function(){
+	  next();
+	}, 2000);
+  
+  })();
