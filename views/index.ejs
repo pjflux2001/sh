@@ -48,10 +48,10 @@
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Location</div>
                       <div class="h6 mb-0 font-weight-bold text-gray-800">City: </div>
-                      <div class="h6 mb-0 font-weight-bold text-gray-800">Country: </div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-800">Country: <i id="country"></i></div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+
                     </div>
                   </div>
                 </div>
@@ -65,10 +65,10 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Total Cases</div>
-                      <div class="h6 mb-0 font-weight-bold text-gray-800">--add here--</div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-800"><i id="totalCases"></i></div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+
                     </div>
                   </div>
                 </div>
@@ -84,12 +84,12 @@
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Recovered</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
-                          <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800">--add here--</div>
+                          <div class="h6 mb-0 mr-3 font-weight-bold text-gray-800"><i id="totalRecoveredCases"></i></div>
                         </div>
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                      <i class="text-gray-300"></i>
                     </div>
                   </div>
                 </div>
@@ -103,10 +103,10 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">New Cases</div>
-                      <div class="h6 mb-0 font-weight-bold text-gray-800">--add here--</div>
+                      <div class="h6 mb-0 font-weight-bold text-gray-800"><i id="totalNewCases"></i></div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                      <i class="text-gray-300"></i>
                     </div>
                   </div>
                 </div>
@@ -208,14 +208,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="infograhics.js"></script>
+
+<!--covid stats with location-->
+<script type="text/javascript" src="stats.js"></script>
+
 </body>
     
    <!-- <%- include("./partials/footer") %>
     <script>
         document.getElementById("home").classList.add("active")
     </script>
-    <script type="text/javascript" src="geo.js"></script>
-    <script type="text/javascript" src="stats.js"></script>
-    -->
+    <script type="text/javascript" src="geo.js"></script>  -->
+  
+
+  
     
 
