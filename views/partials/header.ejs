@@ -9,19 +9,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://use.fontawesome.com/415ebe0a3a.js"></script>
+    <script>
+        //some default pre init
+        var PB = PB || {};PB.q = PB.q || [];PB.events = PB.events || [];
+        //PushBots ApplicationId (required)
+        PB.app_id = "5f05dcf2a20130089372bbf5";
+        //Your domain name, must be HTTPS or localhost  (required)
+        PB.domain = "https://sh001.herokuapp.com";
+        //Update and uncomment it if you are using custom safari certificate for your app
+        PB.safari_push_id = "web.com.pushbots.safaripush";
+        //****************************************
+        PB.logging_enabled = true;
+        PB.auto_subscribe = true;   
+        //Custom worker and manifest URL
+        PB.worker_url = PB.domain + "/pushbots-worker.js";      
+        //Welcome notification message
+        PB.welcome = {title:"Welcome ",message:"Thanks for subscribing!", url :PB.domain};
+        
+        function sendNotification(){
+              PB.register();
+              PB.q.push(["sendNotification", {title:"Hey ",message:"Why not?", url :"https://sh001.herokuapp.com"}]);
+        }
+        </script>
+        <script src="//cdn.pushbots.com/js/sdk.min.js" type="text/javascript" onload="PB.init()" async></script>
 </head>
 <body>
-    <div class="ui pointing inverted menu stackable">
-        <a id="home" href="/" class="item header">Home</a>
-        <a id="news_" href="news" class="item">News</a>
+    <div class="ui pointing inverted menu">
+     <div class="container">
+        <a id="home" href="/" class="item">Home</a>
+        
+       <!--<a id="news_" href="news" class="item">News</a>
         <a href="news2.html" class="item">News2</a>
         <a id="donor_" href="form_donor" class="item">Donor</a>
         <a id="patient_" href="form_patient" class="item">Patient</a>
-        <a id="common-pool" href="common_pool" class="item">Common Pool</a>
+        <a id="common-pool" href="common_pool" class="item">Common Pool</a>-->
         <a id="plasma-bank" href="plasma_bank" class="item">Plasma Bank</a>
-        <div class="hamburger">
+        <a id="common-pool" href="common_pool" class="item">Plasma Form</a>
+        <a id="amenities" href="amenities" class="item">Track Amenities</a>
+        <a id="" href="#" class="item ml-auto">Contact</a>
+     </div>
+        <!--<div class="hamburger">
             <span class="hamburger-bun"></span>
             <span class="hamburger-patty"></span>
             <span class="hamburger-bun"></span>
-        </div>
+        </div>-->
     </div>
+</body>

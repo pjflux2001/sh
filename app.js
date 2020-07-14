@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 app.get("/",function(req,res){
 	res.render("index");
 });
+app.get("/amenities",function(req,res){
+	res.render("amenities");
+});
 app.get("/news",function(req,res){
 	res.render("news1");
 });
