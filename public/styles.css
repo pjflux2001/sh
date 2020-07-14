@@ -221,15 +221,16 @@ body > div.ui.center.aligned.segment.masthead > div > h1{
 }
 
   #slideshow{
-	height: 800px;
+	height: 400px;
 	margin: auto;
 	max-width: 500px;
 	position: relative;
   }
   
   #slideshow img{
-	border-radius: 40px;
-	border: 20px solid #222;
+	border-radius: 10px;
+	/*border: 5px solid #222;*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	height: auto;
 	opacity: 0;
 	left: 0;
@@ -239,7 +240,7 @@ body > div.ui.center.aligned.segment.masthead > div > h1{
 	width: 100%;
 	-webkit-transition: 1s all;
 	-webkit-transform: scale(1);
-	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.1)));
+	/*-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.1)));*/
 	-webkit-backface-visibility: hidden;
   }
   

@@ -15,7 +15,9 @@ var settings = {
 $.ajax(settings).done(function (response) {
 
 	for(i=0; i<35; i++){
-	document.getElementById("slideshow").innerHTML += '<img id="myImg'+i+'"src="'+response.value[i].thumbnailUrl+'"alt="insert text here" />'
+		if(response.value[i].thumbnail.width > response.value[i].thumbnail.height && response.value[i].thumbnail.height < 550){
+			document.getElementById("slideshow").innerHTML += '<img id="myImg'+i+'"src="'+response.value[i].thumbnailUrl+'"alt="insert text here" />'
+		}
 	//document.getElementById("val").innerHTML += "<div class='carousel-item active'>" + "<img src=\""+ response.value[0].thumbnailUrl +"\" class='d-block w-100 h-100'</img>" + "</div>" + "<div class='carousel-item'>" + "<img src=\""+ response.value[i].thumbnailUrl +"\" class='d-block w-100 h-100'</img>" + "</div>";
 	}
 	console.log(response);
