@@ -66,7 +66,7 @@
   cursor: pointer;
   display: block;
   position: relative;
-  background-color: #fcad26;
+  /*background-color: #fcad26;*/
   font-size: 20px;
   font-weight: 500;
   color: white;
@@ -75,7 +75,7 @@
   padding: 25px 75px;
   margin: auto;
   border-radius: 100px;
-  box-shadow: 0 6px #efa424cc;
+  /*box-shadow: 0 6px #efa424cc;*/
   text-align: center;
 }
 
