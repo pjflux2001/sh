@@ -14,7 +14,7 @@ var settings = {
 
 $.ajax(settings).done(function (response) {
 
-	for(i=0; i<35; i++){
+	for(i=0; i<99; i++){
 		if(response.value[i].thumbnail.width > response.value[i].thumbnail.height && response.value[i].thumbnail.height < 550){
 			document.getElementById("slideshow").innerHTML += '<img id="myImg'+i+'"src="'+response.value[i].thumbnailUrl+'"alt="insert text here" />'
 		}
