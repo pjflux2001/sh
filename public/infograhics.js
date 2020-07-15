@@ -3,7 +3,7 @@
 var settings = {
 	"async": true,
 	"crossDomain": true,
-	"url": "https://bing-image-search1.p.rapidapi.com/images/search?q=covid%20infographic",
+	"url": "https://bing-image-search1.p.rapidapi.com/images/search?count=100&q=covid%20infographic",
 	"method": "GET",
 	//"dataType": 'JSON',
 	"headers": {
