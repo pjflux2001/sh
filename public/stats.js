@@ -19,10 +19,22 @@ $(function() {
       document.getElementById("totalCases").innerHTML = result.stats.totalConfirmedCases;
       document.getElementById("totalRecoveredCases").innerHTML = result.stats.totalRecoveredCases;
       document.getElementById("totalNewCases").innerHTML = result.stats.newlyConfirmedCases;
+      $('#totalCases,#totalRecoveredCases,#totalNewCases').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
     })())
     .catch(error => console.log('error', error));
 
    }
   );
+  
   });
 
