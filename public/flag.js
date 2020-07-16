@@ -12,7 +12,7 @@ $.getJSON("https://extreme-ip-lookup.com/json/",
   .then(result => 
     {for(i = 0; i<35 ; i++){
         if(result.data.rows[i].country_abbreviation==json.countryCode.toUpperCase()){
-            document.getElementById('flag').innerHTML = "<img style = 'max-height: 50px;' src="+result.data.rows[i].flag+">";
+            document.getElementById('flag').innerHTML = "<img style = 'max-height: 20px;' src="+result.data.rows[i].flag+">";
         }
     }})
   
