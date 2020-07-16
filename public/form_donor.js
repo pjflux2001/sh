@@ -113,11 +113,11 @@
   var adddonorref = firebase.database().ref().child("donor");
     adddonorref.on("value", function(snapshot) {
         $("#show-donor").empty();
-        var donorHTMLitem = "<h3> Donor List </h3>"
+        //var donorHTMLitem = "<h3> Donor List </h3>"
         //donorHTMLitem = '<div class="card-columns">';
         //donorHTMLitem += '<div class="container pt-4">'
         //donorHTMLitem += '<div class="card-columns">';
-        donorHTMLitem += '<div class="container pt-4">'
+        var donorHTMLitem = '<div class="container pt-4">'
         donorHTMLitem += '<div class="row">'
         snapshot.forEach(function(childsnapshot){
           var item = childsnapshot.val();

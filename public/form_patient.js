@@ -114,8 +114,8 @@
   var addpatientref = firebase.database().ref().child("patient");
     addpatientref.on("value", function(snapshot) {
         $("#show-patient").empty();
-        var patientHTMLitem = "<h3>Patient List</h3>"
-        patientHTMLitem += '<div class="container pt-4">'
+        //var patientHTMLitem = "<h3>Patient List</h3>"
+        var patientHTMLitem = '<div class="container pt-4">'
         patientHTMLitem += '<div class="row">'
         snapshot.forEach(function(childsnapshot){
           var item = childsnapshot.val();
