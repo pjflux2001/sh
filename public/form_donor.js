@@ -41,8 +41,9 @@
         emailAddress: $("#v9").val(),
         age: $("#v10").val(),
         gender: $("#v11").val(),
-        city: $("#v12").val(),
-        country: $("#v13").val(),
+        city: $("#cityId").val(),
+        state: $("#stateId").val(),
+        country: $("#countryId").val(),
         bloodGroup: $("#v14").val(),
         diabetes: $("#v15").val(),
         liver: $("#v16").val(),
@@ -147,6 +148,7 @@
           donorHTMLitem +=      "<li><b> Gender : </b><span>"+ item.gender + "</span></li>"
           donorHTMLitem +=      "<li><b> Blood Group : </b><span>"+ item.bloodGroup + "</span></li>"
           donorHTMLitem +=      "<li><b> City : </b><span>"+ item.city + "</span></li>"
+          donorHTMLitem +=      "<li><b> State : </b><span>"+ item.state + "</span></li>"
           donorHTMLitem +=      "<li><b> Country : </b><span>"+ item.country + "</span></li>"
           donorHTMLitem +=    "</ul></div>";//3
           donorHTMLitem +=  "</div>"

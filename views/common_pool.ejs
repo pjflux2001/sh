@@ -14,16 +14,25 @@
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
       <a class="nav-item nav-link active" id="nav-donor-tab" data-toggle="tab" href="#nav-donor" role="tab" aria-controls="nav-donor" aria-selected="true"><strong>Plasma Donors</strong></a>
       <a class="nav-item nav-link" id="nav-patient-tab" data-toggle="tab" href="#nav-patient" role="tab" aria-controls="nav-patient" aria-selected="false"><strong>Plasma Patients</strong></a>
+
+      <!--filters-->
+
+
+
+      <!---->
+
       <a class="btn ml-auto p-2" id="register" data-toggle="modal" data-target="#registerpopup"><i class="fas fa-user-plus"></i></a>
     </div>
   </nav>
 
   <div class="tab-content" id="nav-tabContent">
-    <div class="tab-pane fade show active" id="nav-donor" role="tabpanel" aria-labelledby="nav-donor-tab"><i id="show-donor"></i></div>
-    <div class="tab-pane fade" id="nav-patient" role="tabpanel" aria-labelledby="nav-pateint-tab"><i id="show-patient"></i></div>
+    <div class="tab-pane fade show active" id="nav-donor" role="tabpanel" aria-labelledby="nav-donor-tab"><span id="show-donor"></span></div>
+    <div class="tab-pane fade" id="nav-patient" role="tabpanel" aria-labelledby="nav-pateint-tab"><span id="show-patient"></span></div>
   </div>
 
 </div>
+
+
 
 <!--<script>
 document.getElementById("register").addEventListener("click", function() {
