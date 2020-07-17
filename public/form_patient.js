@@ -39,8 +39,9 @@
             emailAddress: $("#v9").val(),
             age: $("#v10").val(),
             gender: $("#v11").val(),
-            city: $("#v12").val(),
-            country: $("#v13").val(),
+            city: $("#cityId").val(),
+            state: $("#stateId").val(),
+            country: $("#countryId").val(),
             hospitalName: $("#v14").val(),
             bloodGroup: $("#v15").val()
           };
@@ -136,11 +137,12 @@
           patientHTMLitem += "<div id='active'>"
           patientHTMLitem +=  '<div class="card-body text-dark text-center pr-5">'//2
           patientHTMLitem +=    "<div class='card-text text-left pt-4'><ul>";//3
-          patientHTMLitem +=      "<li><b> Donor Name : </b><span>"+ item.donorName + "</span></li>"
+          patientHTMLitem +=      "<li><b> Donor Name : </b><span>"+ item.patientName + "</span></li>"
           patientHTMLitem +=      "<li><b> Age : </b><span>"+ item.age + "</span></li>"
           patientHTMLitem +=      "<li><b> Gender : </b><span>"+ item.gender + "</span></li>"
           patientHTMLitem +=      "<li><b> Blood Group : </b><span>"+ item.bloodGroup + "</span></li>"
           patientHTMLitem +=      "<li><b> City : </b><span>"+ item.city + "</span></li>"
+          patientHTMLitem +=      "<li><b> State : </b><span>"+ item.state + "</span></li>"
           patientHTMLitem +=      "<li><b> Country : </b><span>"+ item.country + "</span></li>"
           patientHTMLitem +=    "</ul></div>";//3
           patientHTMLitem +=  "</div>"

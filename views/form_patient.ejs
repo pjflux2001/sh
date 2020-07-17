@@ -102,20 +102,37 @@
           <div class="invalid-feedback">Please provide a valid hospital name.</div>
         </div>
       </div>
-      <!--patient city-->
-      <div class="form-row">
-        <div class="col-md-6 mb-3">
-          <label for="v12">City</label>
-          <input id="v12" type="text" class="form-control col-sm-8" style="size: auto;" required> 
-          <div class="invalid-feedback">Please provide a valid city.</div>
-        </div>
-      </div>
       <!--patient country-->
       <div class="form-row">
         <div class="col-md-6 mb-3">
-          <label for="v13">Country</label>
-          <input id="v13" type="text" class="form-control col-sm-8" style="size: auto;" required>
+          <label for="country">Country</label>
+          <!--<input id="v13" type="text" class="form-control col-sm-8" style="size: auto;" required>-->
+          <select name="country" class="countries order-alpha form-control col-sm-8" id="countryId" required>
+            <option value="">Select Country</option>
+          </select>
           <div class="invalid-feedback">Please provide a valid country.</div>
+        </div>
+      </div>
+      <!--patient state-->
+      <div class="form-row">
+          <div class="col-md-6 mb-3">
+              <label for="state">State</label>
+              <!--<input id="v13" type="text" class="form-control col-sm-8" style="size: auto;" required>-->
+              <select name="state" class="states order-alpha form-control col-sm-8" id="stateId" required>
+                <option value="">Select State</option>
+              </select>
+                <div class="invalid-feedback">Please provide a valid state.</div>
+          </div>
+      </div>
+      <!--patient city-->
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="city">City</label>
+          <!--<input id="v12" type="text" class="form-control col-sm-8" style="size: auto;" required>-->
+          <select name="city" class="cities order-alpha form-control col-sm-8" id="cityId" required>
+            <option value="">Select City</option>
+          </select>
+          <div class="invalid-feedback">Please provide a valid city.</div>
         </div>
       </div>
       <!--patient blood group-->
@@ -158,6 +175,10 @@
   <div class="container" id="show-patient">
     <h3> Patient List </h3>
   </div>-->
+
+      <!--Geodata api for city state country-->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+      <script src="//geodata.solutions/includes/countrystatecity.js"></script>
 
 
      <!--firebase-->
