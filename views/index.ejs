@@ -175,12 +175,17 @@
             <div class="col-12 col-sm-6">
                 <h3 class="text-center">Youtube</h3>
                 <!-- Youtube Card -->
+
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary text-center">Youtube</h6>
                 </div>
                 <div class="card-body">
-                  <h4 class="small font-weight-bold">--add--</h4>
+                  <h4 class="small font-weight-bold">
+                    <iframe id="ytplayer" type="text/html" width="100%" height="360"
+                    src="https://www.youtube.com/embed?listType=user_uploads&list=who"
+                    frameborder="0"></iframe>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -199,6 +204,8 @@
         </div>
     </div>
 </div>
+<div id="catagoryname"><h1>Trending</h1></div>
+      <ul id="trending"></ul>
 
 <footer class="footer">
     <div class="container-fluid border bg-secondary" style="min-height: 15rem;">
@@ -216,11 +223,11 @@
 <script src="flag.js"></script>
 </body>
     
-   <!-- <%- include("./partials/footer") %>
-    <script>
+   <%- include("./partials/footer") %>
+    <!-- <script>
         document.getElementById("home").classList.add("active")
     </script>
-    <script type="text/javascript" src="geo.js"></script>  -->
+    <script type="text/javascript" src="geo.js"></script>  --> -->
   
 
   
