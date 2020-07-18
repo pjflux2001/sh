@@ -38,7 +38,12 @@ app.get("/common_pool",function(req,res){
 app.get("/plasma_bank",function(req,res){
 	res.render("plasma_bank");
 });
-
+app.get("/technology",function(req,res){
+	res.render("technology");
+});
+app.get("/contact",function(req,res){
+	res.render("contact");
+});
 // using Twilio SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
 app.post("/email",function(req,res){
