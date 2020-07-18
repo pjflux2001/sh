@@ -1,23 +1,5 @@
 <%- include("./partials/header") %>
 
-    <!--NEWS 1 : <a href='news'>Link</a>
-    <br>
-    NEWS 2 : <a href='news2.html'>Link</a>
-    <br>
-    Donor Form : <a href='form_donor.html'>Link</a>
-    <br>
-    Patient Form : <a href='form_patient.html'>Link</a>
-    <br>
-    Common Pool : <a href='common_pool.html'>Link</a>
-    <br>
-    <button onclick="getLocation()">My Location</button>
-    <br>
-    <button onclick="showstats()">Show Stats</button>
-    <br>
-    Plasma Bank : <a href='plasma_bank.html'>Link</a>
-    <br>
-    <p id="geoloc"></p>
-    <p id="stats"></p>-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +10,7 @@
       <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
 <body>    
@@ -133,16 +116,78 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-6">
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                      <h6 class="m-0 font-weight-bold text-primary text-center">Local Updates</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="text-center">
-                          <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="" alt="">
-                        </div>
-                        <a href="#">Browse for more updates &rarr;</a>
+  <div class="col-12 col-sm-6">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary text-center">Local Updates</h6>
+        </div>
+        <div class="card-body">
+  
+    <!--news scroller-->
+    <div id="marqueecontainer" onMouseover="copyspeed=pausespeed"  onMouseout="copyspeed=marqueespeed">
+      <div id="vmarquee" style="position: absolute; width: 98%;">
+                          
+          <!--YOUR SCROLL CONTENT HERE-->
+          <span id="news1"></span>
+           <!--YOUR SCROLL CONTENT HERE-->
+                          
+       </div>
+     </div>
+                           
+     <style type="text/css">                   
+      #marqueecontainer{
+      position: relative;
+       width: 500px auto; /*marquee width */
+      height: 280px; /*marquee height */
+       background-color: white;
+      overflow: hidden;
+      /*border: 3px solid orange;*/
+      /*padding: 2px;*/
+      padding-left: 8px;
+      padding-right: 8px;
+      }
+      </style>  
+
+  <script type="text/javascript">
+                          
+    var delayb4scroll=1000 //Specify initial delay before marquee starts to scroll on page (2000=2 seconds)
+    var marqueespeed=1 //Specify marquee scroll speed (larger is faster 1-10)
+    var pauseit=1 //Pause marquee onMousever (0=no. 1=yes)?
+ 
+    var copyspeed=marqueespeed
+    var pausespeed=(pauseit==0)? copyspeed: 0
+    var actualheight=''
+ 
+     function scrollmarquee(){
+     if (parseInt(cross_marquee.style.top)>(actualheight*(-1)+8))
+      cross_marquee.style.top=parseInt(cross_marquee.style.top)-copyspeed+"px" 
+      else 
+      cross_marquee.style.top=parseInt(marqueeheight)+8+"px"
+      }
+ 
+      function initializemarquee(){
+       cross_marquee=document.getElementById("vmarquee")
+        cross_marquee.style.top=0
+        marqueeheight=document.getElementById("marqueecontainer").offsetHeight
+        actualheight=cross_marquee.offsetHeight //height of marquee content (much of which is hidden from view)
+          if (window.opera || navigator.userAgent.indexOf("Netscape/7")!=-1){ //if Opera or Netscape 7x, add scrollbars to scroll and exit
+        cross_marquee.style.height=marqueeheight+"px"
+       cross_marquee.style.overflow="scroll"
+       return
+        }
+         setTimeout('lefttime=setInterval("scrollmarquee()",30)', delayb4scroll)
+         }
+ 
+      if (window.addEventListener)
+       window.addEventListener("load", initializemarquee, false)
+   else if (window.attachEvent)
+      window.attachEvent("onload", initializemarquee)
+    else if (document.getElementById)
+      window.onload=initializemarquee
+
+  </script>      
+  <!--news scoller end-->              
+
                     </div>
                 </div>
             </div>
@@ -217,11 +262,19 @@
 
 <script src="infograhics.js"></script>
 
+<!--news1-->
+<script src="news1.js"></script>
 
 <!--covid stats with location-->
 <script type="text/javascript" src="stats.js"></script>
 <!--fetches flag-->
 <script src="flag.js"></script>
+
+<!--bootstrap 4.5-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
 </body>
     
    <%- include("./partials/footer") %>
