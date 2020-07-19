@@ -5,7 +5,7 @@ var settings = {
   };
   
   $.ajax(settings).done(function (response) {
-    console.log(response);
+    //console.log(response);
     //var xmlDoc = $.parseXML(response);
     //var $xml = $(xmlDoc);
     //var $items = $xml.find("channel");

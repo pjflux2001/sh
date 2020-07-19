@@ -20,7 +20,7 @@ $.ajax(settings).done(function (response) {
 		}
 	//document.getElementById("val").innerHTML += "<div class='carousel-item active'>" + "<img src=\""+ response.value[0].thumbnailUrl +"\" class='d-block w-100 h-100'</img>" + "</div>" + "<div class='carousel-item'>" + "<img src=\""+ response.value[i].thumbnailUrl +"\" class='d-block w-100 h-100'</img>" + "</div>";
 	}
-	console.log(response);
+	//console.log(response);
 });
 
 (function(){
