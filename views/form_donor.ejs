@@ -53,7 +53,7 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v7">Donor Name</label>
-          <input id="v7" type="text" class="form-control col-sm-8" style="size: auto;" required>
+          <input id="v7" name="name" type="text" class="form-control col-sm-8" style="size: auto;" required>
           <div class="invalid-feedback">Please provide a valid name.</div>
         </div>
       </div>
@@ -62,7 +62,7 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v8">Mobile Number</label>
-          <input id="v8" type="tel" class="form-control col-sm-8" pattern="[0-9]{6,12}" style="size: auto;" required> 
+          <input id="v8" name="number" type="tel" class="form-control col-sm-8" pattern="[0-9]{6,12}" style="size: auto;" required> 
           <div class="invalid-feedback">Please provide a valid mobile number.</div>
         </div>
       </div>
@@ -78,7 +78,7 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v10">Age</label>
-          <input id="v10" type="number" min="0" max="110" class="form-control col-sm-8" style="size: auto;" required> 
+          <input name="age" id="v10" type="number" min="0" max="110" class="form-control col-sm-8" style="size: auto;" required> 
           <div class="invalid-feedback">Please provide a valid age.</div>
         </div>
       </div>
@@ -86,7 +86,7 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v11">Gender</label>
-          <select id="v11" required>
+          <select name="gender" id="v11" required>
             <option value="">--select--</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -131,7 +131,7 @@
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="v14">Blood Group</label>
-          <select id="v14" required>
+          <select id="v14" name="bg" required>
             <option selected value="">--select--</option>
             <option value="A+">A+</option>
             <option value="A-">A-</option>
