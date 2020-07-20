@@ -53,9 +53,9 @@ app.post("/email",function(req,res){
 	const msg = {
 	to: email,
 	from: 'pj.flux2001@gmail.com',
-	subject: 'SMK Sending with Twilio SendGrid is Fun',
-	text: 'and easy to do anywhere, even with Node.js',
-	html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+	subject: 'Team BITSians : Success',
+	text: 'Dear User, Your form has been successfully pushed into our database. It will expire in next 72 hours, hence take the required steps to comply with the same. Best Regards, Team BITSians ',
+	html: 'Dear User,<br><br>Your form has been successfully pushed into our database. It will expire in next <strong>72 hours</strong>, hence take the required steps to comply with the same.<br><br> Best Regards,<br> Team BITSians',
 	};
 	sgMail.send(msg);
 	res.render("index");
