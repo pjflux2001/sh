@@ -105,17 +105,9 @@
                       <h6 class="m-0 font-weight-bold text-dark text-center"><i class="large globe icon"></i>Global Updates</h6>
                     </div>
                     <div class="card-body">
-
-                      <div id="marqueecontainer" onMouseover="copyspeed=pausespeed"  onMouseout="copyspeed=marqueespeed">
-                        <div id="vmarquee" style="position: absolute; width: 98%;">
-                                            
-                            <!--YOUR SCROLL CONTENT HERE-->
-                            <span id="globalnews"></span>
-                             <!--YOUR SCROLL CONTENT HERE-->
-                                            
-                         </div>
+                      <div class="scroller">
+                        <span id="globalnews"></span>
                       </div>
-                       
                     </div>
                 </div>
             </div>
@@ -136,6 +128,7 @@
                           
        </div>
     </div>
+   
                            
      <!--<style type="text/css">                   
       #marqueecontainer{
@@ -292,6 +285,7 @@
 <script src="news1.js"></script>
 
 <script src="news-scroller.js"></script>
+
 
 <!--covid stats with location-->
 <script type="text/javascript" src="stats.js"></script>

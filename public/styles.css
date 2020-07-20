@@ -359,3 +359,54 @@ body > div.ui.center.aligned.segment.masthead > div > h1{
 	padding-left: 8px;
 	padding-right: 8px;
 	}
+
+
+	/* Styles */
+	.scroller {
+		position: relative;
+		width: 500px auto; /*marquee width */
+	   height: 280px; /*marquee height */
+		background-color: white;
+	   overflow: hidden;
+	   /*border: 3px solid orange;*/
+	   /*padding: 2px;*/
+	   padding-left: 8px;
+	   padding-right: 8px;
+	}
+	.scroller span {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 margin: 0;
+	 line-height: 20px;
+	 text-align: left;
+	 /* Starting position */
+	 -moz-transform:translateY(100%);
+	 -webkit-transform:translateY(100%);	
+	 transform:translateY(100%);
+	 /* Apply animation to this element */	
+	 -moz-animation: scroller 40s linear infinite;
+	 -webkit-animation: scroller 40s linear infinite;
+	 animation: scroller 40s linear infinite;
+	}
+	/* Move it (define the animation) */
+	@-moz-keyframes scroller {
+	 0%   { -moz-transform: translateY(10%); }
+	 100% { -moz-transform: translateY(-350%); }
+	}
+	@-webkit-keyframes scroller {
+	 0%   { -webkit-transform: translateY(10%); }
+	 100% { -webkit-transform: translateY(-350%); }
+	}
+	@keyframes scroller {
+	 0%   { 
+	 -moz-transform: translateY(10%); /* Firefox bug fix */
+	 -webkit-transform: translateY(10%); /* Firefox bug fix */
+	 transform: translateY(10%); 		
+	 }
+	 100% { 
+	 -moz-transform: translateY(-350%); /* Firefox bug fix */
+	 -webkit-transform: translateY(-350%); /* Firefox bug fix */
+	 transform: translateY(-350%); 
+	 }
+	}
