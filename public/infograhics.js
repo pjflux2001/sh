@@ -8,7 +8,7 @@ var settings = {
 	//"dataType": 'JSON',
 	"headers": {
 		"x-rapidapi-host": "bing-image-search1.p.rapidapi.com",
-		"x-rapidapi-key": "e94bf9e7a6mshf66f488d77fd452p116c67jsn2282a1fe240f"
+		"x-rapidapi-key": "e84e9db187msh8b37ae8b89861e8p10b89ejsne35c4c328189"
 	}
 }
 
