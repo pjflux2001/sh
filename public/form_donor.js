@@ -186,6 +186,15 @@
     });
   
     $(document).on("click", ".delete-donor", function(){
-      var donorID = $(this).attr('id');
+      var pass_key = window.prompt('ONLY admins are allowed to delete. Enter your admin key : ');
+      if(pass_key == "team_bitsians"){
+        alert("Accepted!");
+        var donorID = $(this).attr('id');
       firebase.database().ref("donor/" + donorID).remove();
+      alert("Deleted!");
+    }else{
+      alert("Unauthorized!");
+      $(this).prop('disabled', true);
+    }
+        
     });
