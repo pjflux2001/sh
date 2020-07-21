@@ -188,6 +188,14 @@
     });
   
     $(document).on("click", ".delete-patient", function(){
-      var patientID = $(this).attr('id');
-      firebase.database().ref("patient/" + patientID).remove();
+      var pass_key = window.prompt('ONLY admins are allowed to delete. Enter your admin key : ');
+      if(pass_key == "team_bitsians"){
+        alert("Accepted!");
+        var donorID = $(this).attr('id');
+      firebase.database().ref("donor/" + donorID).remove();
+      alert("Deleted!");
+    }else{
+      alert("Unauthorized!");
+      $(this).prop('disabled', true);
+    }
     });
