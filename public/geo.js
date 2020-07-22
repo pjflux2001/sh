@@ -25,10 +25,12 @@ var geocoder = platform.getSearchService();
 function geocodeAndSearch(){
   var rad = parseInt(document.getElementById("slider_value").innerHTML);
   var query = document.getElementById("service").value;
+  
   // embeded map
   if(query != ""){
-    document.getElementById("embededMap").innerHTML = '<iframe width="100%" height="400px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q='+ query +'%20nearby&key=AIzaSyACDxf4BL0zC3sYra6Eq72JAjthSwNSoXQ" allowfullscreen></iframe>'
-  }
+      document.getElementById("embededMap").innerHTML = '<iframe width="100%" height="400px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q='+ query.replace(" ","%20") +'%20nearby&key=AIzaSyACDxf4BL0zC3sYra6Eq72JAjthSwNSoXQ" allowfullscreen></iframe>'
+    }
+
   let geocodeParam ={
       q: query ,
       in: 'circle:'+ browserPos.lat +',' + browserPos.lon +';r='+rad,
