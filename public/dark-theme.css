@@ -11,8 +11,9 @@ body > div.ui.main.text.container > div > div:nth-child(2) > div > a {
 body > div.ui.main.text.container > h1 {
     color: white;
 }
-p,hr,h1,h3 {
+p,hr,h1,h3,h4 {
     color: white !important;
+    background-color: black;
 }
 .dark {
     color: white !important;
@@ -24,7 +25,20 @@ body > div.ui.text.container > h2 > div > div{
     color: white !important;
 }
 /*==================CUSTOM CONFIGURATION FOR SH SITE==============*/
-
+body > div.ui.pointing.inverted.menu.stackable{
+    margin-bottom: 0px;
+}
+.table,.btn{
+    background-color: cornsilk;
+}
+.home-bg, .block ,.title{
+    background-color: black;
+    background:black !important;
+}
+.card-body{
+    color: black;
+}
+/*=========ALL SELECTOR FOR TEXT==============*/
 
 
 /*====================ADD NEW CSS BELOW THIS DIVIDER==============*/
