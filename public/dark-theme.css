@@ -1,6 +1,6 @@
 body{
     color: white;
-    background-color: black;
+    background-color: black !important;
 }
 body > div.ui.main.text.container > div > div:nth-child(1) > div > a {
     color:white !important;
@@ -39,6 +39,12 @@ body > div.ui.pointing.inverted.menu.stackable{
     color: black;
 }
 /*=========ALL SELECTOR FOR TEXT==============*/
+body > div.container.pt-3{
+    background-color: black;
+}
+.jumbotron{
+    background-color: black!important;
+}
 
 
 /*====================ADD NEW CSS BELOW THIS DIVIDER==============*/
