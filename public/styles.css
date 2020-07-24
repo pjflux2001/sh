@@ -92,7 +92,7 @@
 		display: none;
 	}
 
-	.ui.stackable.menu .item:not(.header ){
+	.ui.stackable.menu .item:not(.home-icon ){
 		display:none;
 	}
 

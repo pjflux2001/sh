@@ -273,7 +273,14 @@
       <span>Copyright &copy; Team BITSians 2020</span>
     </div>
 </footer>
-<script> document.getElementById("home").classList.add("active"); </script>
+<script>
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		if (isMobile) {
+      console.log("HE HE MOBILE USER YOU WILL NEVER GET THIS MESSAGE");
+		} else {
+			document.getElementById("home").classList.add("active"); 
+		}
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
