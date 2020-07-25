@@ -24,11 +24,11 @@ document.querySelector("body > div.ui.pointing.menu.stackable > div.hamburger").
 			// if it's light -> go dark
 			if(themeStylesheet.href.includes('light')){
 				themeStylesheet.href = 'dark-theme.css';
-				themeToggle.innerText = 'Light Mode';
+				themeToggle.innerHTML = '<i class="fa fa-sun-o fa-lg"></i>';
 			} else {
 				// if it's dark -> go light
 				themeStylesheet.href = 'light-theme.css';
-				themeToggle.innerText = 'Dark Mode';
+				themeToggle.innerHTML = '<i class="fa fa-moon-o fa-lg"></i>';
 			}
 			// save the preference to localStorage
 			localStorage.setItem('theme',themeStylesheet.href)  
